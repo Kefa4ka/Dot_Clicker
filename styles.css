@@ -1,0 +1,222 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+    padding: 50px;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    max-width: 1000px;
+    width: 100%;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #2196F3;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav a:hover {
+    color: #ff5722;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #4CAF50;
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-family: 'Pacifico', cursive;
+}
+
+h2 {
+    margin-top: 40px;
+    font-size: 32px;
+    color: #333;
+    border-bottom: 2px solid #2196F3;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+#clicker-button, #start-timer-button, #save-score {
+    padding: 14px 28px;
+    font-size: 22px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+
+#clicker-button {
+    background: linear-gradient(135deg, #ff6666 0%, #e55d5d 100%);
+    color: white;
+}
+
+#clicker-button:hover {
+    background: linear-gradient(135deg, #e55d5d 0%, #ff6666 100%);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#clicker-button:active {
+    transform: scale(0.95);
+}
+
+#start-timer-button {
+    background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%);
+    color: white;
+}
+
+#start-timer-button:hover {
+    background: linear-gradient(135deg, #388E3C 0%, #4CAF50 100%);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#start-timer-button:active {
+    transform: scale(0.95);
+}
+
+#save-score {
+    background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+    color: white;
+    margin-top: 20px;
+}
+
+#save-score:hover {
+    background: linear-gradient(135deg, #1976D2 0%, #2196F3 100%);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#save-score:disabled {
+    background: #b0b0b0;
+    cursor: not-allowed;
+}
+
+#save-score:active {
+    transform: scale(0.95);
+}
+
+#time-left {
+    font-size: 30px;
+    color: #FF5722;
+    font-weight: bold;
+    background: rgba(255, 87, 34, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.shop-container, .auto-clicker-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.shop-item, .auto-clicker-item {
+    margin: 15px;
+    width: calc(33% - 30px);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.shop-item .card {
+    background-color: #f9f9f9;
+}
+
+.auto-clicker-item .card {
+    background-color: #e0f7fa;
+}
+
+.buy-button, .buy-auto-clicker {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.3s;
+}
+
+.buy-button {
+    background: linear-gradient(135deg, #ff6666 0%, #e55d5d 100%);
+    color: white;
+}
+
+.buy-button:hover {
+    background: linear-gradient(135deg, #e55d5d 0%, #ff6666 100%);
+}
+
+.buy-button:active {
+    transform: scale(0.95);
+}
+
+.buy-auto-clicker {
+    background: linear-gradient(135deg, #66b2ff 0%, #59a6ff 100%);
+    color: white;
+}
+
+.buy-auto-clicker:hover {
+    background: linear-gradient(135deg, #59a6ff 0%, #66b2ff 100%);
+}
+
+.buy-auto-clicker:active {
+    transform: scale(0.95);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@media (max-width: 768px) {
+    .shop-item, .auto-clicker-item {
+        width: calc(50% - 30px);
+    }
+}
+
+@media (max-width: 480px) {
+    .shop-item, .auto-clicker-item {
+        width: calc(100% - 30px);
+    }
+}
